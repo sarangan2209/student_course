@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Validator;
 
 class ApiController extends Controller
 {
-    //
+    
     public function register(Request $request)
     {
         $validateuser = validator::make(
@@ -45,7 +45,7 @@ class ApiController extends Controller
         return response()->json([
             'status' => true, 
             'message' => 'User has created successfully',
-            'token' => $user->createToken('API TOKEN')->plainTextToken   
+               
      ],200); 
     }
 
